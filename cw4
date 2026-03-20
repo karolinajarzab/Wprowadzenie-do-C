@@ -1,0 +1,317 @@
+//zad1
+#include <iostream>
+int main() {
+    std::cout << "Hello World!" << std::endl;
+    return 0;
+}
+
+//zad2
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int num1=7;
+    float num2=7.5;
+    char letter='A';
+    cout << "Numer1: " << num1 << endl;
+    cout << "Numer2: " << num2 << endl;
+    cout << "Letter: " << letter << endl;
+    return 0;
+}
+
+//zad3
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int three=3;
+    int eleven=11;
+    cout << "Sum: " << (three + eleven) << endl;
+    return 0;
+}
+
+//zad4
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    float x=12;
+    float y=7;
+    x=x/y;
+    cout << x << endl;
+    return 0;
+}
+
+//zad5
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    char name[] = "Karolina";
+    char lastname[] = "Jarzab";
+    cout << name << endl;
+    cout << lastname << endl;
+    return 0;
+}
+
+//petle
+
+//zad1
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string dna = "ATGCGATATCGGATCGA";
+    int A = 0;
+    int T = 0;
+    int G = 0;
+    int C = 0;
+    for (int i = 0; i < dna.length(); ++i) {
+        if (dna[i] == 'A') A++;
+        else if (dna[i] == 'T') T++;
+        else if (dna[i] == 'G') G++;
+        else if (dna[i] == 'C') C++;
+    }
+
+    cout << "A: " << A << endl;
+    cout << "T: " << T << endl;
+    cout << "G: " << G << endl;
+    cout << "C: " << C << endl;
+
+    return 0;
+}
+
+//zad2
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string dna_seq = "ATGCGATATCGGATCGAe";
+    int i=0;
+    while(i < dna_seq.length() && dna_seq[i] != 'e') {
+        cout << dna_seq[i] << endl;
+        i++;
+    }
+    cout << "Wystapil symbol STOP" << endl;
+    return 0;
+}
+
+//zad3
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string input;
+    cout << "Enter a string: ";
+    cin >> input;
+    int len = 0;
+    int i=0;
+    do {
+        input.length();
+        ++len;    
+        ++i;
+    }
+    while(i < input.length());
+    cout << "Dlugosc sekwencji: " << len << endl;
+    return 0;
+}
+
+//cwiczenia 3 - 13.03.2026
+
+//zad4
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string input;
+    cout << "Enter a string: ";
+    cin >> input;
+    int g = 0;
+    int c = 0;
+    float s = 0;
+    for (int i = 0; i < input.length(); ++i) {
+        if (input[i] == 'G') g++;
+        else if (input[i] == 'C') c++;
+        ++s;
+    }
+    cout << "Liczba G: " << g << endl;
+    cout << "Liczba C: " << c << endl;
+    cout << "Zawartosc GC w sekwencji: " << (g + c) / s * 100 << "%" << endl;
+    return 0;
+}
+
+//funkcje
+
+//zad 1
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    char input;
+    cout << "Enter a letter: " << endl;
+    cin >> input;
+    for (char input = 'A'; input <= 'Z';) {
+        input++;
+    }
+    cout << ++input << endl;
+    return 0;
+}
+
+//zad 2
+#include <iostream>
+#include <string>
+using namespace std;
+
+string love() {
+    return "I love C++!";
+}
+int main() {
+    string output = love();
+    cout << output << endl;
+    return 0;
+}
+
+//zad 3
+#include <iostream>
+#include <string>
+using namespace std;
+
+int mnozenie(int a, int b) {
+    return a * b;
+}
+
+int main() {
+    int a = 0;
+    int b = 0;
+    cout << "Podaj dwie liczby: " << endl;
+    cin >> a  >> b;
+    int output = mnozenie(a, b); cout << "Wynik mnozenia: " << output << endl;
+    return 0;
+}
+
+//zad 4
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool liczba(int a) {
+    return a % 4 == 0;
+}
+
+int main() {
+    int b;
+    cout << "Podaj liczbe: " << endl;
+    cin >> b;
+    if (liczba(b)) {
+        cout << "true" << endl;
+    } else {
+        cout << "false" << endl;
+    }
+    return 0;
+}
+
+//zad 5
+#include <iostream>
+#include <string>
+using namespace std;
+
+string c = "";
+string inicjaly(string a) {
+    c = c + a[0];
+    for(int i=1; i < a.length(); ++i) {
+        if (a[i] == '_') {
+            c = c + a[++i];
+        }
+    }
+    cout << c << endl;
+    return 0;
+}
+
+int main() {
+    inicjaly("adam_kowalski");
+}
+
+//zad 6
+#include <iostream>
+#include <string>
+using namespace std;
+
+string odwrot = "";
+string odwrocenie(string a) {
+    int len = a.length();
+    for(int i=len-1; i > 0; i--) {
+        odwrot = odwrot + a[i];
+    }
+    cout << odwrot << endl;
+    return 0;
+}
+
+int main() {
+    odwrocenie("adam_kowalski");
+}
+
+//zad 7
+#include <iostream>
+#include <string>
+using namespace std;
+
+string imie = "";
+string wielkie_litery(string a) {
+    for(int i=0; i < a.length(); ++i) {
+        imie += toupper(a[i]);
+    }
+    cout << imie << endl;
+    return 0;
+}
+
+int main() {
+    wielkie_litery("adam_kowalski");
+}
+
+//operacje na plikach
+
+//zad 1
+#include <iostream>
+#include <string>
+using namespace std;
+
+double x = 0;
+double fold_change(double a, double b) {
+    if(b == 0) {
+        cout << x << endl;
+    }
+    else if(a < 0 || b < 0) {
+        x = -1;
+        cout << x << endl;
+    }
+    else {
+        x = a / b;
+        cout << x << endl;
+    }
+    return 0;
+}
+
+int main() {
+    double c;
+    double d;
+    cout << "Wprowadź pierwszą liczbę: " << endl;
+    cin >> c;
+    cout << "Wprowadź drugą liczbę: " << endl;
+    cin >> d;
+    fold_change(c, d);
+}
+
+//zad 2
+#include <iostream>
+#include <string>
+using namespace std;
+
